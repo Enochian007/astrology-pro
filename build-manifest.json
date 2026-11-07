@@ -1,0 +1,14 @@
+{
+  "name": "AstrologyPro",
+  "version": "1.0.0",
+  "build": "final-step-8",
+  "ephemeris": "astronomy-engine@2.1.19",
+  "supportedHouses": [
+    "Whole Sign",
+    "Equal"
+  ],
+  "unsupportedHouses": [
+    "Placidus"
+  ],
+  "generatedAt": "2026-09-12T06:35:43Z"
+}

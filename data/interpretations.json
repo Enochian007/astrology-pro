@@ -1,0 +1,30 @@
+{
+  "sun": {
+    "title": "Sun",
+    "summary": "Core identity and vitality."
+  },
+  "moon": {
+    "title": "Moon",
+    "summary": "Emotional needs and habits."
+  },
+  "mercury": {
+    "title": "Mercury",
+    "summary": "Thinking and communication."
+  },
+  "venus": {
+    "title": "Venus",
+    "summary": "Values, attraction and relating."
+  },
+  "mars": {
+    "title": "Mars",
+    "summary": "Drive, assertion and action."
+  },
+  "jupiter": {
+    "title": "Jupiter",
+    "summary": "Growth, meaning and expansion."
+  },
+  "saturn": {
+    "title": "Saturn",
+    "summary": "Structure, responsibility and limits."
+  }
+}

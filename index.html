@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="color-scheme" content="dark light">
+  <meta name="description" content="AstrologyPro interactive celestial and astrology dashboard">
+  <title>AstrologyPro</title>
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="app" class="app-shell">
+  <header class="app-header">
+    <button class="brand" data-route="celestial" aria-label="Open Celestial workspace">
+      <span class="brand-mark">✦</span><span>AstrologyPro</span>
+    </button>
+    <button id="profileSwitcher" class="profile-switcher" aria-haspopup="dialog">
+      <span class="muted">Profile</span><strong id="profileName">No profile</strong><span>⌄</span>
+    </button>
+    <button id="timeSummary" class="time-summary">
+      <span id="headerDate">—</span><span id="headerTime">—</span><span id="liveBadge" class="badge">CUSTOM</span>
+    </button>
+    <div class="header-actions">
+      <button id="themeToggle" class="icon-button" aria-label="Toggle theme">☾</button>
+      <button class="icon-button" data-route="settings" aria-label="Open settings">⚙</button>
+      <button id="exportButton" class="icon-button" aria-label="Export HTML report">⇩</button>
+    </div>
+  </header>
+
+  <aside class="sidebar"><nav id="desktopNav" aria-label="Primary"></nav></aside>
+  <main id="workspaceRoot" class="workspace" tabindex="-1"></main>
+
+  <footer class="simulation-dock" aria-label="Simulation timeline">
+    <div class="sim-controls">
+      <button data-step="-365" aria-label="Back one year">◀◀</button>
+      <button data-step="-1" aria-label="Back one day">◀</button>
+      <button id="playPause" aria-label="Play simulation">▶</button>
+      <button id="nowButton" class="now-button">NOW</button>
+      <button data-step="1" aria-label="Forward one day">▶</button>
+      <button data-step="365" aria-label="Forward one year">▶▶</button>
+    </div>
+    <div class="timeline-wrap">
+      <input id="timeline" type="range" min="-3650" max="3650" value="0" step="1" aria-label="Simulation day offset">
+      <div class="timeline-meta">
+        <span id="timelineDate">—</span>
+        <label>Speed
+          <select id="speedSelect">
+            <option value="1">Real time</option>
+            <option value="60">1 min/sec</option>
+            <option value="3600">1 hour/sec</option>
+            <option value="86400" selected>1 day/sec</option>
+            <option value="604800">7 days/sec</option>
+            <option value="2592000">30 days/sec</option>
+          </select>
+        </label>
+      </div>
+    </div>
+  </footer>
+
+  <nav id="mobileNav" class="mobile-nav" aria-label="Mobile primary"></nav>
+  <div id="dialogRoot"></div>
+  <div id="toastRoot" class="toast-root" aria-live="polite"></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/astronomy-engine@2.1.19/astronomy.browser.min.js"></script>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>

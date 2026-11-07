@@ -1,0 +1,49 @@
+{
+  "cases": [
+    {
+      "name": "Brisbane modern",
+      "date": "1990-06-15",
+      "time": "14:35",
+      "timezone": "Australia/Brisbane",
+      "latitude": -27.47,
+      "longitude": 153.03,
+      "houseSystem": "whole"
+    },
+    {
+      "name": "London DST",
+      "date": "1985-07-01",
+      "time": "09:15",
+      "timezone": "Europe/London",
+      "latitude": 51.5074,
+      "longitude": -0.1278,
+      "houseSystem": "equal"
+    },
+    {
+      "name": "New York winter",
+      "date": "2000-01-15",
+      "time": "23:45",
+      "timezone": "America/New_York",
+      "latitude": 40.7128,
+      "longitude": -74.006,
+      "houseSystem": "whole"
+    },
+    {
+      "name": "High latitude guardrail",
+      "date": "1975-03-20",
+      "time": "12:00",
+      "timezone": "Atlantic/Reykjavik",
+      "latitude": 64.1466,
+      "longitude": -21.9426,
+      "houseSystem": "equal"
+    }
+  ],
+  "assertions": [
+    "Planet longitudes are finite numbers in [0,360).",
+    "Ascendant/MC are finite for valid observer coordinates.",
+    "Whole Sign cusps are exactly 30 degrees apart.",
+    "Equal cusps are exactly 30 degrees apart from the Ascendant.",
+    "Placidus returns an explicit unsupported warning, not fabricated cusps.",
+    "Aspect strengths are in [0,100].",
+    "Invalid IANA timezone is rejected by form validation."
+  ]
+}
